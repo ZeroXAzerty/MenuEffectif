@@ -7,13 +7,6 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Function
-function sendnotification(message)
-    SetNotificationBackgroundColor(70)
-    SetNotificationTextEntry("STRING")
-    AddTextComponentString(message)
-    DrawNotification(false, false)
-    end
 
 -- Variables
 
@@ -23,7 +16,7 @@ local ped = PlayerPedId()
 
 local MenuEffectif = {
     Base = { Title = "~p~Menu Effectif",HeaderColor = {255, 0, 0,}},
-    Data = { currentMenu = "HuntRP" },
+    Data = { currentMenu = "servername" },
     Events = {
         onSelected = function(self, _, btn, JMenu, menuData, currentButton, currentSlt, result)
  
@@ -32,16 +25,14 @@ local MenuEffectif = {
     },
 
     Menu = {
-        ["HuntRP"] = {
+        ["servername"] = {
             b = {
                 {name = "----Owner----------", ask = "", askX = true},
-                {name = "ZeroX", ask = "", askX = true},
+                {name = "You", ask = "", askX = true},
                 {name = "----Co Owner-------", ask = "", askX = true},
-                {name = "ExoticShadoX", ask = "", askX = true},
                 {name = "----Gérant Staff---", ask = "", askX = true},
                 {name = "----Super Admin----", ask = "", askX = true},
                 {name = "----Développeur----", ask = "", askX = true},
-                {name = "ZeroX", ask = "", askX = true},
                 {name = "----Admin----------", ask = "", askX = true},
                 {name = "----Modérateur-----", ask = "", askX = true},
                 {name = "----Assistant------", ask = "", askX = true},
